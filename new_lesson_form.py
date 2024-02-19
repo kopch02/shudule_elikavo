@@ -14,7 +14,7 @@ END_TIMES = ["9:45","10:40","11:45","12:50","13:50","14:40","15:30"]
 
 class Lesson_Form(QMainWindow):
 
-    def __init__(self, name_klass, day_week, main):
+    def __init__(self, name_klass, day_week, main, teacher_list):
         super().__init__()
         uic.loadUi('view/new_lesson.ui', self)
         self.combo_end:QComboBox
@@ -22,10 +22,10 @@ class Lesson_Form(QMainWindow):
         self.combo_klass:QComboBox
         self.combo_num_lesson:QComboBox
         self.combo_week:QComboBox
+        self.combo_teacher:QComboBox
         
         self.line_cabinet:QLineEdit
         self.line_item:QLineEdit
-        self.line_teacher:QLineEdit
         
         self.ok_btn:QPushButton
         self.cancel_btn:QPushButton
@@ -39,6 +39,7 @@ class Lesson_Form(QMainWindow):
         
         self.combo_klass.addItem(name_klass)
         self.combo_week.addItem(day_week)
+        self.combo_teacher.addItems(teacher_list)
         
         self.combo_num_lesson.currentTextChanged.connect(self.switch_num_lesson)
         self.ok_btn.clicked.connect(self.ok_btn_func)
@@ -56,7 +57,7 @@ class Lesson_Form(QMainWindow):
         
         lesson = self.line_item.text()
         num_cabinet = self.line_cabinet.text()
-        teacher = self.line_teacher.text()
+        teacher = self.combo_teacher.currentText()
         
         start_time = self.combo_start.currentText()
         end_time = self.combo_end.currentText()

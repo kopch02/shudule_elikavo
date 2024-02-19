@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>522</height>
+    <height>530</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -267,7 +267,7 @@
      <rect>
       <x>450</x>
       <y>430</y>
-      <width>91</width>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
@@ -278,6 +278,24 @@
     </property>
     <property name="text">
      <string>Изменить</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="teacher_btn">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>470</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Учителя</string>
     </property>
    </widget>
   </widget>

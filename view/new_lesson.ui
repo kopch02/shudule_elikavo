@@ -50,7 +50,7 @@
      <string>Отмена</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -130,15 +130,6 @@
      </item>
      <item row="4" column="1">
       <widget class="QLineEdit" name="line_cabinet">
-       <property name="font">
-        <font>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QLineEdit" name="line_teacher">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -232,6 +223,9 @@
         <string>Класс</string>
        </property>
       </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QComboBox" name="combo_teacher"/>
      </item>
     </layout>
    </widget>
